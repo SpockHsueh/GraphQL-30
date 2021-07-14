@@ -47,7 +47,7 @@ jobs:
     - run: yarn test
 
   DeployStaging:
-    - name: Deploy to staging
+      name: Deploy to staging
       if: github.ref == 'refs/heads/staging'
       needs: [BuildAndTest]
       runs-on: ubuntu-20.04
