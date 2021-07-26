@@ -28,11 +28,10 @@ env:
 
 jobs:
   DeployStaging:
-    name: Deploy to staging
+    - name: Deploy to staging
+      run: |
+        echo "github.ref is"
 
-    - run: |
-        echo "github.ref is $github.ref"
-        
     if: github.ref == 'refs/heads/staging'
     runs-on: ubuntu-20.04
     environment: 
