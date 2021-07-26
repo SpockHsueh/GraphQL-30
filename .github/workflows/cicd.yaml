@@ -29,8 +29,7 @@ env:
 jobs:
   DeployStaging:
     - name: Deploy to staging
-      run: |
-        echo "github.ref is"
+      run: echo running on branch ${github.ref}
 
     if: github.ref == 'refs/heads/staging'
     runs-on: ubuntu-20.04
